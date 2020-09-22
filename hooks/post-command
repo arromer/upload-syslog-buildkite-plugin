@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main() {
+    # Uploads syslog as buildkite artifact
+    buildkite-agent artifact upload /var/log/syslog
+}
+
+main "$@"

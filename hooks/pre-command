@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main() {
+    # Makes sure syslog is rotated before executing the command
+    sudo logrotate -f /etc/logrotate.conf
+}
+
+main "$@"
